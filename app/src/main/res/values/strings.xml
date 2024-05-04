@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Pc_01</string>
+    <string name="nota">CÁLCULO DE NOTAS</string>
+    <string name="parcial">Examen parcial</string>
+    <string name="examenfinal">Examen Final</string>
+    <string name="permanente">Promedio de evaluación permanente(PEP)</string>
+    <string name="tvparcial" />
+    <string name="tvfinal" />
+    <string name="tvtarea" />
+</resources>

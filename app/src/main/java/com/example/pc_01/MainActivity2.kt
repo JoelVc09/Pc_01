@@ -1,6 +1,7 @@
 package com.example.pc_01
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +17,15 @@ class MainActivity2 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+
+        // Obtener el promedio pasado como extra del Intent
+        val promedio = intent.getDoubleExtra("promedio", 0.0)
+
+        // Buscar el TextView con el id idresult
+        val tvResult: TextView = findViewById(R.id.idresult)
+
+        // Mostrar el promedio en el TextView
+        tvResult.text = promedio.toString()
     }
 }

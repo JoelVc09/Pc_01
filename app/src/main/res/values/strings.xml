@@ -7,4 +7,7 @@
     <string name="tvparcial" />
     <string name="tvfinal" />
     <string name="tvtarea" />
+    <string name="btn_calcular">CALCULAR</string>
+
+
 </resources>

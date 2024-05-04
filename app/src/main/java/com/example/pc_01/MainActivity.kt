@@ -1,6 +1,10 @@
 package com.example.pc_01
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,12 +21,26 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val etMessage: EditText = findViewById(R.id.etMessage)
-        val btnSend: Button = findViewById(R.id.btnSend)
 
+        val etParcial: EditText = findViewById(R.id.idparcial)
+        val etFinal: EditText = findViewById(R.id.idfinal)
+        val etPEP: EditText = findViewById(R.id.idtarea)
+        val btnCalcularPromedio: Button = findViewById(R.id.btnCal)
 
+        btnCalcularPromedio.setOnClickListener {
+            val parcial = etParcial.text.toString().toDoubleOrNull() ?: 0.0
+            val examenFinal = etFinal.text.toString().toDoubleOrNull() ?: 0.0
+            val pep = etPEP.text.toString().toDoubleOrNull() ?: 0.0
 
+            val promedio = (parcial + examenFinal + pep) / 3
 
+            // Crear un Intent para iniciar MainActivity2
+            val intent = Intent(this, MainActivity2::class.java)
+            // Agregar el promedio como un extra al Intent
+            intent.putExtra("promedio", promedio)
+            // Iniciar MainActivity2
+            startActivity(intent)
+        }
 
 
 

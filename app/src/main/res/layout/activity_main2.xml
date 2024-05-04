@@ -63,6 +63,10 @@
         android:layout_height="wrap_content"
         android:text="Aprobado"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="381dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545" />
 </androidx.constraintlayout.widget.ConstraintLayout>
